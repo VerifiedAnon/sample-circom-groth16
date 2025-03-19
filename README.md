@@ -2,12 +2,12 @@
 
 #### Usage
 
-Proof can be found in `build/nullifier/my_input/proof.json` and the verifying key in `build/nullifier/groth16_vkey.json`.
-Public inputs can be found in `build/nullifier/my_input/public.json`.
+Proof, Verifying Key, and Public Inputs are stored in the verifier_inputs folder. 
+Just copy and paste it in the program as it rust syntax.
 
 #### Proof generation
 
-To recompile the circuit and generate the proof and verifying key, run:
+To generate the proof and verifying key yourself, run:
 
 ``` bash
 npm run prove

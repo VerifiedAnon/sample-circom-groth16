@@ -11,7 +11,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@solana/web3.js": "^1.98.0",
     "circomkit": "^0.3.2",
     "circomlib": "^2.0.5"
+  },
+  "devDependencies": {
+    "ffjavascript": "^0.3.1",
+    "snarkjs": "^0.7.5"
   }
 }
