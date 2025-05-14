@@ -12,3 +12,4 @@ template ComputeNullifier() {
     poseidon.inputs[1] <== unsafeRandom;
     nullifier <== poseidon.out;
 }
+
