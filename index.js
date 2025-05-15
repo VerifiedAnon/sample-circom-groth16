@@ -5,6 +5,8 @@ import path from "path";
 import { buildBn128, utils } from "ffjavascript";
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { fsync } from 'fs';
+import { readFile } from 'fs/promises';
 const { unstringifyBigInts } = utils;
 
 const __filename = fileURLToPath(import.meta.url);
@@ -26,7 +28,7 @@ await circomkit.compile('nullifier', {
 ///////////////////////
 const wasmPath = path.join(__dirname, "build/nullifier/circuit_js", "circuit.wasm");
 const zkeyPath = path.join(__dirname, "build/nullifier", "groth16_pkey.zkey");
-
+const vkpath = path.join()
 const maxValue = BigInt("21888242871839275222246405745257275088548364400416034343698204186575808495617");
 
 let input = { "secret": getRandomBigInt(maxValue), "unsafeRandom": getRandomBigInt(maxValue) };
@@ -35,6 +37,7 @@ let { proof, publicSignals } = await snarkjs.groth16.fullProve(input, wasmPath, 
 console.log(publicSignals)
 console.log(proof)
 
+  const VK = readFile()
 let curve = await buildBn128();
 
 let proofProc = unstringifyBigInts(proof);
